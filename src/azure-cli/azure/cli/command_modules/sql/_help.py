@@ -95,9 +95,9 @@ examples:
   - name: Export bacpac using an SAS key.
     text: |
         az sql db export -s myserver -n mydatabase -g mygroup -p password -u login \\
-            --storage-key "?sr=b&sp=rw&se=2018-01-01T00%3A00%3A00Z&sig=mysignature&sv=2015-07-08" \\
             --storage-key-type SharedAccessKey \\
-            --storage-uri https://myAccountName.blob.core.windows.net/myContainer/myBacpac.bacpac
+            --storage-uri https://myAccountName.blob.core.windows.net/myContainer/myBacpac.bacpac \\
+            --storage-key "?sr=b&sp=rw&se=2018-01-01T00%3A00%3A00Z&sig=mysignature&sv=2015-07-08"
   - name: Export bacpac using a storage account key.
     text: |
         az sql db export -s myserver -n mydatabase -g mygroup -p password -u login \\
